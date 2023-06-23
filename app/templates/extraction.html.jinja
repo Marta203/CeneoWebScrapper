@@ -8,11 +8,11 @@ Ekstrakcja opinii | CeneoScrapper
     <div class=" row justify-content-center align-items-center row-cols-1 row-cols-md-2 g-5 m-4"
         style="max-width: 1080px; height: 100%;">
         <div class="col">
-            <form action="/product">
+            <form action="{{url_for('extract')}}" method="POST">
                 <label for="productId" class="mb-2" style="font-size: 1.2rem;">Id Produktu</label>
                 <div class="form-group d-flex flex-row gap-3">
                     <input type="text" required minlength="6" maxlength="20" class="form-control" id="productId"
-                        placeholder="2137420">
+                        placeholder="2137420" name="product_code">
                     <button type="submit" class="btn btn-outline-dark">Ekstraktuj</button>
                 </div>
             </form>
